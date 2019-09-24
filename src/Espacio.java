@@ -12,10 +12,22 @@ public class Espacio {
     
     private int numero;
     private boolean libre;
-    private boolean reservado;
-    private int HoraReservada;
-    
-    public Espacio() {
+
+    public int getNumero() {
+        return numero;
     }
+
+    public boolean isLibre() {
+        return libre;
+    }
+
+    public void setLibre(boolean libre) {
+        this.libre = libre;
+    }
+
+    public Espacio(int numero) {
+        this.numero = numero;
+    }
+        
     
 }

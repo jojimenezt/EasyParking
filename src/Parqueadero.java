@@ -16,11 +16,34 @@ public class Parqueadero {
     private ArrayList<Espacio> espacios;
     private ArrayList<Usuario> usuarios;
     private ArrayList<Empleado> empleados;
+    
+    int espaciosTotales;
 
     public Parqueadero() {
         espacios = new ArrayList<>();
         usuarios = new ArrayList<>();
         empleados = new ArrayList<>();
+    }
+
+    public ArrayList<Espacio> getEspacios() {
+        return espacios;
+    }
+
+    public ArrayList<Usuario> getUsuarios() {
+        return usuarios;
+    }
+
+    public ArrayList<Empleado> getEmpleados() {
+        return empleados;
+    }
+    
+    public void addEspacio(){
+        espacios.add(new Espacio(espaciosTotales+1));
+        espaciosTotales++;
+    }
+    
+    public void addUsuario(String nombre, String apellido, int edad, String placa){
+        usuarios.add(new Usuario(nombre, apellido, edad, placa));
     }
     
     

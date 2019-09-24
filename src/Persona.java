@@ -15,4 +15,22 @@ class Persona {
     protected String email;
     protected String direccion;
     protected String tel;
+
+    public Persona(String nombre, String apellido, int edad, String email, String direccion, String tel) {
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.edad = edad;
+        this.email = email;
+        this.direccion = direccion;
+        this.tel = tel;
+    }
+
+    public Persona(String nombre, String apellido, int edad) {
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.edad = edad;
+    }
+    
+    
+    
 }
