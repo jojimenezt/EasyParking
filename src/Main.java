@@ -62,7 +62,26 @@ public class Main {
                             break;
                             
                             case 3:
-                                System.out.println("Ingrese la placa del carro a eliminar: ");
+                                System.out.println("Ingrese su nombre: ");
+                                String nombre2= x.next();
+                                System.out.println("Ingrese su apellido");
+                                String apellido2= x.next();
+                                Usuario u1= parq.buscarUsuario(nombre2, apellido2);
+                                 if(u1==null){
+                                    System.out.println("No existe, debe registrarse");
+                                }else{
+                                    System.out.println("Ingrese la placa del carro a eliminar: ");
+                                    String placa3= x.next();
+                                    u1.eliminarCarro(placa3);
+                                }
+                            break;
+                            
+                            case 4:
+                                //revisar como se va a hacer lo de los lugares de parqueo
+                            break;
+                            
+                            case 5:
+                                //revisar lo de puntos 
                             break;
                             
                         }
@@ -70,6 +89,30 @@ public class Main {
                 break;
                 
                 case 2:
+                    int m=0;
+                    do{
+                        System.out.println("1. Determinar el numero de puestos vacios: ");
+                        System.out.println("2. Determinar la contabilidad de Easy Parking: ");
+                        System.out.println("3. Agregar espacio al parqueadero: ");
+                        System.out.println("0. Salir");
+                        m=x.nextInt();
+                        switch(m){
+                            case 1:
+                                System.out.println("El numero de espacios vacios es: "+ parq.puestosVacios());
+                            break;
+                            
+                            case 2:
+                                //contabilidad
+                            break;
+                            
+                            case 3:
+                                parq.addEspacio();
+                                System.out.println("Se ha agregado un nuevo espacio en el parqueadero");
+                            break;
+                            
+                        }
+                        
+                    }while(m!=0);
                 break;
                 
             }

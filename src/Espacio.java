@@ -27,6 +27,7 @@ public class Espacio {
 
     public Espacio(int numero) {
         this.numero = numero;
+        this.libre = true;//cuando se crea un nuevo espacio, se crea como libre
     }
         
     

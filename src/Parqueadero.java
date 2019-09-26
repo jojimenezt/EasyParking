@@ -20,9 +20,9 @@ public class Parqueadero {
     int espaciosTotales;
 
     public Parqueadero() {
-        espacios = new ArrayList<>();
-        usuarios = new ArrayList<>();
-        empleados = new ArrayList<>();
+        this.espacios = new ArrayList<>();
+        this.usuarios = new ArrayList<>();
+        this.empleados = new ArrayList<>();
     }
 
     public ArrayList<Espacio> getEspacios() {
@@ -53,9 +53,24 @@ public class Parqueadero {
                 usuario=usuarios.get(i);
             }
         }
+        if(usuario==null){
+            throw new NullPointerException("Usuario no existe");
+        }
+        
         
         return usuario;
         
+    }
+    
+    public int puestosVacios(){
+        int ac=0;
+        for(int i=0;i<espacios.size();i++){
+            if(espacios.get(i).isLibre()){
+                ac++;
+            }
+        }
+        
+        return ac;
     }
     
     

@@ -24,7 +24,7 @@ class Usuario extends Persona {
     public Usuario(String nombre, String apellido, int edad, String placa) {
         super(nombre, apellido, edad);
         this.puntos = 0;
-        this.carros.add(new Carro(placa));
+        this.carros=new ArrayList<>();
     }
     
     public void addCarro(String placa){
