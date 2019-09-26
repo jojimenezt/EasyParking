@@ -22,6 +22,11 @@ public class Carro {
     public Carro(String placa) {
         this.placa = placa;
     }
+
+    public String getPlaca() {
+        return placa;
+    }
+    
     
     
 }

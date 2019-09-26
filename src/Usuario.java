@@ -31,4 +31,15 @@ class Usuario extends Persona {
         this.carros.add(new Carro(placa));
     }
     
+    public boolean eliminarCarro(String placa){
+        boolean eliminado= false;
+        for(int i=0;i<carros.size();i++){
+            if(carros.get(i).getPlaca().equals(placa)){
+                carros.remove(i);
+                eliminado=true;
+            }
+        }
+        return eliminado;
+    }
+    
 }

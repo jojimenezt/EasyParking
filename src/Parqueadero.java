@@ -46,5 +46,17 @@ public class Parqueadero {
         usuarios.add(new Usuario(nombre, apellido, edad, placa));
     }
     
+    public Usuario buscarUsuario(String nombre, String apellido){
+        Usuario usuario= null;
+        for(int i=0;i<usuarios.size();i++){
+            if(usuarios.get(i).getNombre().equals(nombre) && usuarios.get(i).getApellido().equals(apellido)){
+                usuario=usuarios.get(i);
+            }
+        }
+        
+        return usuario;
+        
+    }
+    
     
 }

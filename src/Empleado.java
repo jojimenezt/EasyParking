@@ -9,6 +9,7 @@
  * @author Simón
  */
 class Empleado extends Persona {
+    private String nombre;
     private String cargo;
     private int salario;
 
@@ -20,9 +21,11 @@ class Empleado extends Persona {
 
     public Empleado(String cargo, int salario, String nombre, String apellido, int edad) {
         super(nombre, apellido, edad);
+        this.nombre = nombre;
         this.cargo = cargo;
         this.salario = salario;
     }
     
-    
 }
+
+  
