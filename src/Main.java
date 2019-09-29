@@ -43,7 +43,7 @@ public class Main {
                                     System.out.println("2. Eliminar automovil");
                                     System.out.println("3. Reservar parqueo automovil");
                                     System.out.println("4. Solicitar factura");
-                                    System.out.println("0. Salir");
+                                    System.out.println("0. Cerrar secion");
                                     opc=x.nextInt();
                                     switch(opc){
                                     case 1:
