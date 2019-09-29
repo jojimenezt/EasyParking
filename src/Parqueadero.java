@@ -70,5 +70,16 @@ public class Parqueadero {
         return ac;
     }
     
+    public boolean comprobarUsuario(String nickname,String password){
+        boolean ingresar=false;
+        for(int i=0;i<usuarios.size();i++){
+            if(usuarios.get(i).getNickname().equals(nickname) && usuarios.get(i).getPassword().equals(password)){
+                ingresar=true;
+            }else{
+                ingresar=false;
+            }
+        }
+        return ingresar;
+    }
     
 }

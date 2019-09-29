@@ -19,6 +19,7 @@ public class Main {
             System.out.println("Bienvenido a Easy parking, seleccione el tipo de usuario: ");
             System.out.println("1. Cliente");
             System.out.println("2. Empleado");
+            System.out.println("3. Invitado");
             System.out.println("0. Salir");
             k= x.nextInt();
             switch(k){
@@ -26,71 +27,68 @@ public class Main {
                     int l=0;
                     do{
                         System.out.println("Que desea hacer:");
-                        System.out.println("1. Registarse");
-                        System.out.println("2. Agregar automovil");
-                        System.out.println("3. Eliminar automovil");
-                        System.out.println("4. Reservar parqueo automovil");
-                        System.out.println("5. Solicitar factura");
+                        System.out.println("1. Iniciar sesion");
                         System.out.println("0. Salir");
                         l= x.nextInt();
                         switch(l){
                             case 1:
-                                System.out.println("Ingrese su nombre: ");
-                                String nombre=x.next();
-                                System.out.println("Ingrese su apellido: ");
-                                String apellido= x.next();
-                                System.out.println("Ingrese la edad: ");
-                                int edad= x.nextInt();
-                                System.out.println("Ingrese el numero de la placa del carro");
-                                String placa= x.next();
-                                System.out.println("Ingrese su numero de identificacion");
-                                String id= x.next();
-                                System.out.println("Ingrese su nickname");
-                                String nickname= x.next();
-                                System.out.println("Ingrese su contraseña");
-                                String password= x.next();
-                                parq.addUsuario(nombre, apellido, edad, placa, id,nickname,password);
-                                System.out.println("Ingreso exitoso");
+                                int opc=0;
+                                do{
+                                    System.out.println("Ingrese nickname");
+                                    String nickname=x.next();
+                                    System.out.println("Ingrese contraseña");
+                                    String password=x.next();
+                                    if(parq.comprobarUsuario(nickname, password)){
+                                    System.out.println("1. Agregar automovil");
+                                    System.out.println("2. Eliminar automovil");
+                                    System.out.println("3. Reservar parqueo automovil");
+                                    System.out.println("4. Solicitar factura");
+                                    System.out.println("0. Salir");
+                                    opc=x.nextInt();
+                                    switch(opc){
+                                    case 1:
+                                        System.out.println("Ingrese su nombre: ");
+                                        String nombreb= x.next();
+                                        System.out.println("Ingrese su apellido: ");
+                                        String apellidob= x.next();
+                                        Usuario u=parq.buscarUsuario(nombreb, apellidob);
+                                        if(u.equals(null)){
+                                            System.out.println("No existe, debe registrarse");
+                                        }else{
+                                            System.out.println("Ingrese la placa del nuevo carro: ");
+                                            String placa2= x.next();
+                                            u.addCarro(placa2);
+                                        }
+                                    break;
+
+                                    case 2:
+                                        System.out.println("Ingrese su nombre: ");
+                                        String nombre2= x.next();
+                                        System.out.println("Ingrese su apellido");
+                                        String apellido2= x.next();
+                                        Usuario u1= parq.buscarUsuario(nombre2, apellido2);
+                                         if(u1==null){
+                                            System.out.println("No existe, debe registrarse");
+                                        }else{
+                                            System.out.println("Ingrese la placa del carro a eliminar: ");
+                                            String placa3= x.next();
+                                            u1.eliminarCarro(placa3);
+                                        }
+                                    break;
+
+                                    case 3:
+                                        //revisar como se va a hacer lo de los lugares de parqueo
+                                    break;
+
+                                    case 4:
+                                        //revisar lo de puntos 
+                                    break;
+                                    }
+                                    }else{
+                                        System.out.println("Su nombre de usuario o contraseña es incorrecta, por favor intente de nuevo");
+                                    }
+                                }while(opc!=0);
                             break;
-                            
-                            case 2:
-                                System.out.println("Ingrese su nombre: ");
-                                String nombreb= x.next();
-                                System.out.println("Ingrese su apellido: ");
-                                String apellidob= x.next();
-                                Usuario u=parq.buscarUsuario(nombreb, apellidob);
-                                if(u.equals(null)){
-                                    System.out.println("No existe, debe registrarse");
-                                }else{
-                                    System.out.println("Ingrese la placa del nuevo carro: ");
-                                    String placa2= x.next();
-                                    u.addCarro(placa2);
-                                }
-                            break;
-                            
-                            case 3:
-                                System.out.println("Ingrese su nombre: ");
-                                String nombre2= x.next();
-                                System.out.println("Ingrese su apellido");
-                                String apellido2= x.next();
-                                Usuario u1= parq.buscarUsuario(nombre2, apellido2);
-                                 if(u1==null){
-                                    System.out.println("No existe, debe registrarse");
-                                }else{
-                                    System.out.println("Ingrese la placa del carro a eliminar: ");
-                                    String placa3= x.next();
-                                    u1.eliminarCarro(placa3);
-                                }
-                            break;
-                            
-                            case 4:
-                                //revisar como se va a hacer lo de los lugares de parqueo
-                            break;
-                            
-                            case 5:
-                                //revisar lo de puntos 
-                            break;
-                            
                         }
                     }while(l!=0);
                 break;
@@ -121,6 +119,35 @@ public class Main {
                         }
                         
                     }while(m!=0);
+                break;
+                case 3:
+                    int n=0;
+                    do{
+                        System.out.println("Que desea hacer:");
+                        System.out.println("1. Registarse");
+                        System.out.println("0. Salir");
+                        n= x.nextInt();
+                        switch(n){
+                            case 1:
+                                System.out.println("Ingrese su nombre: ");
+                                String nombre=x.next();
+                                System.out.println("Ingrese su apellido: ");
+                                String apellido= x.next();
+                                System.out.println("Ingrese la edad: ");
+                                int edad= x.nextInt();
+                                System.out.println("Ingrese el numero de la placa del carro");
+                                String placa= x.next();
+                                System.out.println("Ingrese su numero de identificacion");
+                                String id= x.next();
+                                System.out.println("Ingrese su nickname");
+                                String nickname= x.next();
+                                System.out.println("Ingrese su contraseña");
+                                String password= x.next();
+                                parq.addUsuario(nombre, apellido, edad, placa, id,nickname,password);
+                                System.out.println("Ingreso exitoso");
+                            break;
+                        }
+                    }while(n!=0);
                 break;
                 
             }

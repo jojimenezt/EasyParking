@@ -41,14 +41,4 @@ class Usuario extends Persona {
         }
         return eliminado;
     }
-    
-    public boolean comprobarUsuario(String nickname,String password){
-        boolean ingresar=false;
-        if(this.nickname.equals(nickname)&&this.password.equals(password)){
-            ingresar=true;
-        }else{
-            ingresar=false;
-        }
-        return ingresar;
-    }
 }
