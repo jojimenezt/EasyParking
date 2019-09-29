@@ -1,4 +1,5 @@
 import java.util.*;
+import sun.security.tools.KeyStoreUtil;
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -42,7 +43,13 @@ public class Main {
                                 int edad= x.nextInt();
                                 System.out.println("Ingrese el numero de la placa del carro");
                                 String placa= x.next();
-                                parq.addUsuario(nombre, apellido, edad, placa);
+                                System.out.println("Ingrese su numero de identificacion");
+                                String id= x.next();
+                                System.out.println("Ingrese su nickname");
+                                String nickname= x.next();
+                                System.out.println("Ingrese su contraseña");
+                                String password= x.next();
+                                parq.addUsuario(nombre, apellido, edad, placa, id,nickname,password);
                                 System.out.println("Ingreso exitoso");
                             break;
                             

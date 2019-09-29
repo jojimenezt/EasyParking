@@ -42,8 +42,8 @@ public class Parqueadero {
         espaciosTotales++;
     }
     
-    public void addUsuario(String nombre, String apellido, int edad, String placa){
-        usuarios.add(new Usuario(nombre, apellido, edad, placa));
+    public void addUsuario(String nombre, String apellido, int edad, String placa,String id, String nickname, String password){
+        usuarios.add(new Usuario(nombre, apellido, edad, id,placa, nickname,password));
     }
     
     public Usuario buscarUsuario(String nombre, String apellido){

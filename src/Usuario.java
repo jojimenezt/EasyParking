@@ -15,14 +15,14 @@ class Usuario extends Persona {
     private int puntos;
     private ArrayList<Carro> carros;
 
-    public Usuario(String nombre, String apellido, int edad, String email, String direccion, String tel, int puntos, String placa, String id) {
-        super(nombre, apellido, edad, email, direccion, tel, id);
+    public Usuario(String nombre, String apellido, int edad, String email, String direccion, String tel, int puntos, String placa, String id, String nickname, String password) {
+        super(nombre, apellido, edad, email, direccion, tel, id, nickname, password);
         this.puntos = puntos;
         this.carros.add(new Carro(placa));
     }
 
-    public Usuario(String nombre, String apellido, int edad, String placa) {
-        super(nombre, apellido, edad);
+    public Usuario(String nombre, String apellido, int edad, String id, String placa, String nickname, String password) {
+        super(nombre, apellido, edad, id,nickname, password);
         this.puntos = 0;
         this.carros=new ArrayList<>();
     }
@@ -42,4 +42,13 @@ class Usuario extends Persona {
         return eliminado;
     }
     
+    public boolean comprobarUsuario(String nickname,String password){
+        boolean ingresar=false;
+        if(this.nickname.equals(nickname)&&this.password.equals(password)){
+            ingresar=true;
+        }else{
+            ingresar=false;
+        }
+        return ingresar;
+    }
 }

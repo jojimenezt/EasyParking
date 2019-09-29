@@ -16,8 +16,10 @@ class Persona {
     protected String direccion;
     protected String tel;
     protected String id;
+    protected String nickname;
+    protected String password;
 
-    public Persona(String nombre, String apellido, int edad, String email, String direccion, String tel,String id) {
+    public Persona(String nombre, String apellido, int edad, String email, String direccion, String tel,String id, String nickname, String password){ 
         this.nombre = nombre;
         this.apellido = apellido;
         this.edad = edad;
@@ -25,12 +27,17 @@ class Persona {
         this.direccion = direccion;
         this.tel = tel;
         this.id = id;
+        this.nickname= nickname;
+        this.password = password;
     }
 
-    public Persona(String nombre, String apellido, int edad) {
+    public Persona(String nombre, String apellido, int edad, String id, String nickname, String password) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.edad = edad;
+        this.id = id;
+        this.nickname= nickname;
+        this.password = password;
     }
 
     public String getNombre() {
