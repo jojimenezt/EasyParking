@@ -26,10 +26,10 @@ public class Main {
                     do{
                         System.out.println("Que desea hacer:");
                         System.out.println("1. Registarse");
-                        System.out.println("2. Agregar carro");
-                        System.out.println("3. Eliminar carro");
-                        System.out.println("4. Parquear carro");
-                        System.out.println("5.Solicitar factura");
+                        System.out.println("2. Agregar automovil");
+                        System.out.println("3. Eliminar automovil");
+                        System.out.println("4. Reservar parqueo automovil");
+                        System.out.println("5. Solicitar factura");
                         System.out.println("0. Salir");
                         l= x.nextInt();
                         switch(l){
@@ -94,6 +94,7 @@ public class Main {
                         System.out.println("1. Determinar el numero de puestos vacios: ");
                         System.out.println("2. Determinar la contabilidad de Easy Parking: ");
                         System.out.println("3. Agregar espacio al parqueadero: ");
+                        System.out.println("4. Agregar espacio al parqueadero: ");
                         System.out.println("0. Salir");
                         m=x.nextInt();
                         switch(m){
