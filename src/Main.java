@@ -46,43 +46,44 @@ public class Main {
                                     System.out.println("0. Cerrar secion");
                                     opc=x.nextInt();
                                     switch(opc){
-                                    case 1:
-                                        System.out.println("Ingrese su nombre: ");
-                                        String nombreb= x.next();
-                                        System.out.println("Ingrese su apellido: ");
-                                        String apellidob= x.next();
-                                        Usuario u=parq.buscarUsuario(nombreb, apellidob);
-                                        if(u.equals(null)){
-                                            System.out.println("No existe, debe registrarse");
-                                        }else{
-                                            System.out.println("Ingrese la placa del nuevo carro: ");
-                                            String placa2= x.next();
-                                            u.addCarro(placa2);
-                                        }
-                                    break;
+                                        case 1:
+                                            System.out.println("Ingrese su nombre: ");
+                                            String nombreb= x.next();
+                                            System.out.println("Ingrese su apellido: ");
+                                            String apellidob= x.next();
+                                            Usuario u=parq.buscarUsuario(nombreb, apellidob);
+                                            if(u.equals(null)){
+                                                System.out.println("No existe, debe registrarse");
+                                            }else{
+                                                System.out.println("Ingrese la placa del nuevo carro: ");
+                                                String placa2= x.next();
+                                                u.addCarro(placa2);
+                                                System.out.println("El automovil con placa "+placa2+" ha sido registrado satisfactoriamente");
+                                            }
+                                        break;
 
-                                    case 2:
-                                        System.out.println("Ingrese su nombre: ");
-                                        String nombre2= x.next();
-                                        System.out.println("Ingrese su apellido");
-                                        String apellido2= x.next();
-                                        Usuario u1= parq.buscarUsuario(nombre2, apellido2);
-                                         if(u1==null){
-                                            System.out.println("No existe, debe registrarse");
-                                        }else{
-                                            System.out.println("Ingrese la placa del carro a eliminar: ");
-                                            String placa3= x.next();
-                                            u1.eliminarCarro(placa3);
-                                        }
-                                    break;
+                                        case 2:
+                                            System.out.println("Ingrese su nombre: ");
+                                            String nombre2= x.next();
+                                            System.out.println("Ingrese su apellido");
+                                            String apellido2= x.next();
+                                            Usuario u1= parq.buscarUsuario(nombre2, apellido2);
+                                             if(u1==null){
+                                                System.out.println("No existe, debe registrarse");
+                                            }else{
+                                                System.out.println("Ingrese la placa del carro a eliminar: ");
+                                                String placa3= x.next();
+                                                u1.eliminarCarro(placa3);
+                                            }
+                                        break;
 
-                                    case 3:
-                                        //revisar como se va a hacer lo de los lugares de parqueo
-                                    break;
+                                        case 3:
+                                            //revisar como se va a hacer lo de los lugares de parqueo
+                                        break;
 
-                                    case 4:
-                                        //revisar lo de puntos 
-                                    break;
+                                        case 4:
+                                            //revisar lo de puntos 
+                                        break;
                                     }
                                     }else{
                                         System.out.println("Su nombre de usuario o contraseña es incorrecta, por favor intente de nuevo");
