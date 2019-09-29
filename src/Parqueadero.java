@@ -56,10 +56,7 @@ public class Parqueadero {
         if(usuario==null){
             throw new NullPointerException("Usuario no existe");
         }
-        
-        
         return usuario;
-        
     }
     
     public int puestosVacios(){
