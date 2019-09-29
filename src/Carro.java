@@ -8,19 +8,19 @@
  *
  * @author Simón
  */
-public class Carro {
-    private String placa;
+public class Carro extends Automotor{
     private float cilindraje;
-    private float color;
+    private String serieMotor;
 
-    public Carro(String placa, float cilindraje, float color) {
-        this.placa = placa;
+
+    public Carro(String placa, String marca, float cilindraje, String color, int modelo) {
+        super(placa,marca,modelo,color);
         this.cilindraje = cilindraje;
-        this.color = color;
+        this.serieMotor=serieMotor;
     }
 
     public Carro(String placa) {
-        this.placa = placa;
+        super(placa);
     }
 
     public String getPlaca() {
