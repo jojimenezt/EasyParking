@@ -1,4 +1,4 @@
-package test;
+package entidad;
 
 import entidad.*;
 import java.io.FileInputStream;
@@ -6,7 +6,6 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.util.*;
-import persist.ArchiParq;
 import sun.security.tools.KeyStoreUtil;
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -163,10 +162,8 @@ public class Main {
             
         }while(k!=0);
      */   
-        /*Parqueadero par=new Parqueadero();
-        guardar(par);*/
-        Parqueadero ota=recuperar();
-        
+        Parqueadero par=new Parqueadero("cm");
+        guardar(par);
     }
     
     private static Parqueadero recuperar() throws IOException, ClassNotFoundException{
