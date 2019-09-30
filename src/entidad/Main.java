@@ -19,7 +19,7 @@ import sun.security.tools.KeyStoreUtil;
  */
 public class Main {
     public static void main(String[] args) throws IOException, ClassNotFoundException {
-/*        Parqueadero parq = new Parqueadero();
+        Parqueadero parq = new Parqueadero();
         Scanner x= new Scanner(System.in);
         int k=0;
         do{
@@ -59,7 +59,7 @@ public class Main {
                                             System.out.println("Ingrese su apellido: ");
                                             String apellidob= x.next();
                                             //Usuario u=parq.buscarUsuario(nombreb, apellidob);
-/*                                            if(u.equals(null)){
+                                            if(u.equals(null)){
                                                 System.out.println("No existe ese usuario, debe registrarse");
                                             }else{
                                                 System.out.println("Ingrese la placa del nuevo carro: ");
@@ -74,7 +74,7 @@ public class Main {
                                             String nombre2= x.next();
                                             System.out.println("Ingrese su apellido");
                                             String apellido2= x.next();
-/*                                            Usuario u1= parq.buscarUsuario(nombre2, apellido2);
+                                            Usuario u1= parq.buscarUsuario(nombre2, apellido2);
                                              if(u1==null){
                                                 System.out.println("No existe, debe registrarse");
                                             }else{
@@ -82,7 +82,7 @@ public class Main {
                                                 String placa3= x.next();
                                                 u1.eliminarCarro(placa3);
                                             }*/
-  /*                                      break;
+                                        break;
 
                                         case 3:
                                             //revisar como se va a hacer lo de los lugares de parqueo
@@ -161,7 +161,7 @@ public class Main {
             }
             
         }while(k!=0);
-     */   
+        
         Parqueadero par=new Parqueadero("cm");
         guardar(par);
     }
