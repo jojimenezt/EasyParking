@@ -1,0 +1,16 @@
+
+n = 1000000  p = 100000
+
+  DYNAMIC ARRAY: 
+  ns: 3921093400
+  tiempo = 0:3
+  ns: 303103292800
+  tiempo = 5:3
+
+  ARRAY: 
+  ns: 3292101600
+  tiempo = 0:3
+  ns: 118401850800
+  tiempo = 1:58
+
+  LIST:
